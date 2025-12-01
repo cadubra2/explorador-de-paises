@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Explorador de Países</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <h1>Explorador de Países</h1>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="favorites.html">Favoritos</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+
+        <div class="controls-header">
+            <button id="themeToggle" aria-label="Alternar tema">🌓</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="controls">
+        <input type="text" id="searchInput" placeholder="Buscar país..." autocomplete="off" />
+        <select id="continentFilter" aria-label="Filtrar por continente">
+            <option value="">Todos os Continentes</option>
+            <option value="Europe">Europa</option>
+            <option value="Asia">Ásia</option>
+            <option value="Americas">Américas</option>
+            <option value="Africa">África</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+    </section>
+
+    <div id="spinner" class="spinner">Carregando...</div>
+
+    <section id="countriesList" class="countries" aria-live="polite"></section>
+</main>
+
+<footer>
+    <p>
+        Equipe: Antonio Wesley Veras Costa · 
+        Carlos Eduardo Brandão Benedito · 
+        Dalessandro Jose Coelho da Silva · 
+        Pedro Henrique Sousa Cruz
+    </p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

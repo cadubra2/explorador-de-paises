@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Sobre</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <h1>Sobre o Projeto</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="favorites.html">Favoritos</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+        <div class="controls-header">
+            <button id="themeToggleSobre" aria-label="Alternar tema">🌓</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="about-section">
+        <h2>Autores</h2>
+        <ul>
+            <li>Antonio Wesley Veras Costa</li>
+            <li>Carlos Eduardo Brandão Benedito</li>
+            <li>Dalessandro Jose Coelho da Silva</li>
+            <li>Pedro Henrique Sousa Cruz</li>
+        </ul>
+
+        <h2>Tecnologias Utilizadas</h2>
+        <p>HTML5, CSS3, JavaScript, REST Countries API</p>
+
+        <h2>Objetivo</h2>
+        <p>Este projeto tem como objetivo explorar países e suas características utilizando a API pública REST Countries.</p>
+    </section>
+</main>
+
+<footer>
+    <p>
+        Equipe: Antonio Wesley Veras Costa · 
+        Carlos Eduardo Brandão Benedito · 
+        Dalessandro Jose Coelho da Silva · 
+        Pedro Henrique Sousa Cruz
+    </p>
+</footer>
+
+<script>
+/* Sincroniza toggle do tema neste HTML (pequeno inline para manter arquivo leve) */
+(function(){
+    const key = 'site-theme';
+    const apply = (theme) => {
+        if(theme === 'dark') document.documentElement.setAttribute('data-theme','dark');
+        else document.documentElement.removeAttribute('data-theme');
+    };
+    document.getElementById('themeToggleSobre').addEventListener('click', () => {
+        const current = localStorage.getItem(key) === 'dark' ? 'dark' : 'light';
+        const next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem(key, next);
+        apply(next);
+    });
+    // aplica no load
+    apply(localStorage.getItem(key));
+})();
+</script>
+</body>
+</html>

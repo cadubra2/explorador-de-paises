@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Favoritos — Explorador de Países</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+    <div class="header-inner">
+        <h1>Favoritos</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="favorites.html">Favoritos</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+        <div class="controls-header">
+            <button id="themeToggleFav" aria-label="Alternar tema">🌓</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="about-section" style="max-width:900px">
+        <h2>Seus países favoritos</h2>
+        <p>Os países marcados com ⭐ aqui ficam salvos no seu navegador. Você pode removê-los a qualquer momento.</p>
+    </section>
+
+    <div id="spinnerFav" class="spinner">Carregando...</div>
+
+    <section id="favoritesList" class="countries"></section>
+</main>
+
+<footer>
+    <p>
+        Equipe: Antonio Wesley Veras Costa · 
+        Carlos Eduardo Brandão Benedito · 
+        Dalessandro Jose Coelho da Silva · 
+        Pedro Henrique Sousa Cruz
+    </p>
+</footer>
+
+<script src="js/favorites.js"></script>
+</body>
+</html>
